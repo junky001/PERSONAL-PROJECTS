@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | Othoro Mixed Secondary School</title>
+    <link rel="stylesheet" href="othoro.css">
+    <link rel="stylesheet" href="admissions.css">
+</head>
+<body>
+
+    <!-- ===== Sticky header (same as the home page) ===== -->
+    <header class="site-header" id="siteHeader">
+        <div class="site-header__inner">
+            <a class="brand" href="othoro.html">
+                <img class="brand__logo" src="logo.png" alt="Othoro Mixed Secondary School logo" width="100" height="100">
+                <span class="brand__name">Othoro Mixed Secondary School</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+
+            <nav class="nav" id="primaryNav" aria-label="Main">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="othoro.html">Home</a></li>
+                    <li><a class="nav__link is-active" href="admissions.html" aria-current="page">Admissions</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== Page banner ===== -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-hero__title">Admissions</h1>
+                <p class="page-hero__text">Want to join us or admit your child? Fill in the form below to apply.</p>
+            </div>
+        </section>
+
+        <!-- ===== Form + contact details ===== -->
+        <section class="section section--tint">
+            <div class="container admissions">
+
+                <div class="form-card">
+                    <h2 class="form-card__title">Admission form</h2>
+                    <p class="form-card__intro">Fill in the student's details below.</p>
+
+                    <form id="admissionForm" action="https://httpbin.org/post" method="post" novalidate>
+
+                        <!-- Student details -->
+                        <fieldset class="form-group">
+                            <legend class="form-group__title">Student details</legend>
+                            <div class="field-grid">
+
+                                <div class="field">
+                                    <label class="field__label" for="firstName">First name</label>
+                                    <input class="field__input" type="text" id="firstName" name="firstName" placeholder="Enter first name" autocomplete="given-name" required>
+                                    <p class="field__error" id="firstName-error" role="alert"></p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="field__label" for="lastName">Last name</label>
+                                    <input class="field__input" type="text" id="lastName" name="lastName" placeholder="Enter last name" autocomplete="family-name" required>
+                                    <p class="field__error" id="lastName-error" role="alert"></p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="field__label" for="kcpeScore">KCPE score</label>
+                                    <input class="field__input" type="number" id="kcpeScore" name="kcpeScore" placeholder="e.g. 350" min="0" max="500" inputmode="numeric" required>
+                                    <p class="field__hint">Out of 500.</p>
+                                    <p class="field__error" id="kcpeScore-error" role="alert"></p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="field__label" for="kcpeIndex">KCPE index number</label>
+                                    <input class="field__input" type="text" id="kcpeIndex" name="kcpeIndex" placeholder="Enter the KCPE index number" inputmode="numeric" required>
+                                    <p class="field__error" id="kcpeIndex-error" role="alert"></p>
+                                </div>
+
+                                <div class="field field--full">
+                                    <label class="field__label" for="grade">Grade applying for</label>
+                                    <select class="field__input" id="grade" name="grade" required>
+                                        <option value="" disabled selected>Select grade</option>
+                                        <option value="Grade 9">Grade 9</option>
+                                        <option value="Grade 10">Grade 10</option>
+                                        <option value="Grade 11">Grade 11</option>
+                                        <option value="Grade 12">Grade 12</option>
+                                    </select>
+                                    <p class="field__error" id="grade-error" role="alert"></p>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- Parent or guardian details -->
+                        <fieldset class="form-group">
+                            <legend class="form-group__title">Parent or guardian details</legend>
+                            <div class="field-grid">
+
+                                <div class="field">
+                                    <label class="field__label" for="guardianName">Parent/guardian's names</label>
+                                    <input class="field__input" type="text" id="guardianName" name="guardianName" placeholder="Enter parent/guardian's names" autocomplete="name" required>
+                                    <p class="field__error" id="guardianName-error" role="alert"></p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="field__label" for="guardianPhone">Parent/guardian's phone</label>
+                                    <input class="field__input" type="tel" id="guardianPhone" name="guardianPhone" placeholder="e.g. 0712 345 678" autocomplete="tel" required>
+                                    <p class="field__error" id="guardianPhone-error" role="alert"></p>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <button class="btn btn--green" type="submit" id="submitBtn">Submit application</button>
+                        <p class="form-status" id="formStatus" role="status"></p>
+                    </form>
+                </div>
+
+                <!-- Contact details -->
+                <aside class="info-card">
+                    <h2 class="info-card__title">Need help applying?</h2>
+                    <address class="info-card__address">
+                        <strong>P.O BOX 40109-Sondu</strong>
+                    </address>
+                    <ul class="contact-list">
+                        <li><a class="contact-list__link" href="mailto:olangjounkey1@gmail.com">Email us</a></li>
+                        <li><a class="contact-list__link" href="tel:+254740919279">Call us</a></li>
+                        <li><a class="contact-list__link" href="https://wa.me/+254740919279">WhatsApp us</a></li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> Othoro Mixed Secondary School. All rights reserved.</p>
+    </footer>
+
+    <script src="admissions.js"></script>
+</body>
+</html>
