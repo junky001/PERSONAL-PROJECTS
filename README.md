@@ -21,3 +21,32 @@ A website for Othoro Mixed Secondary School, built with HTML, CSS and JavaScript
 - JavaScript
 
 ## Project Structure
+
+```
+├── othoro.html        # Home page
+├── othoro.css         # Home page styles
+├── othoro.js          # Home page scripts
+├── admissions.html    # Admissions page
+├── admissions.css     # Admissions page styles
+└── othoro_files/      # Images and admissions.js
+```
+
+## How to Run
+
+1. Download or clone this repository.
+2. Open `othoro.html` in your browser.
+
+For live reloading, open the folder in VS Code and use the **Go Live** button.
+
+## Status
+
+In progress. [Add what you plan to add next, e.g. a contact page.]
+
+## Author
+
+Jounkey Olang ([@junky001](https://github.com/junky001))
+
+## Acknowledgements
+
+Photos belong to Othoro Mixed Secondary School and are used with the school's permission. [Edit this if it isn't accurate.]
+
