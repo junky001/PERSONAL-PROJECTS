@@ -40,7 +40,7 @@ For live reloading, open the folder in VS Code and use the **Go Live** button.
 
 ## Status
 
-In progress. [Add what you plan to add next, e.g. a contact page.]
+In progress. I amcurrently looking for real images from Othoro school to relace the unrelistic ones.
 
 ## Author
 
@@ -48,4 +48,4 @@ Jounkey Olang ([@junky001](https://github.com/junky001))
 
 ## Acknowledgements
 
-Photos belong to Othoro Mixed Secondary School and are used with the school's permission. [Edit this if it isn't accurate.]
+Photos belong to Othoro Mixed Secondary School and are used with the school's permission except for some few which will be changed soon.
